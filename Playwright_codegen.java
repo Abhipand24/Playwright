@@ -1,4 +1,4 @@
-package framework.projectplaywright;
+package framework.projectplaywright.Playwright;
 
 import java.util.regex.Pattern;
 

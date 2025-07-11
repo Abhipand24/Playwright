@@ -1,4 +1,4 @@
-package framework.projectplaywright;
+package framework.projectplaywright.Playwright;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
@@ -27,7 +27,16 @@ public class Karlatoon_Landing_Navigate {
             page.evaluate("window.scrollTo(0, 0)");
             System.out.println("Scrolled back to top.");
             page.waitForTimeout(5000); // Optional wait
-			//page.locator("//*[@id=\"desktop-header-cnt\"]/div[2]/nav/div/div[5]/div/a").click();
+            //Seeker Login
+			page.locator("//*[@id=\"navbarsExample09\"]/a").click();
+			page.waitForTimeout(3000);
+			page.locator("//*[@id=\"root\"]/div[1]/section[2]/div[1]/div/div/div[1]/form/div[2]/div[1]/div[1]/div/input").fill("qa.alobha@gmail.com");
+			page.waitForTimeout(3000);
+			page.locator("//*[@id=\"root\"]/div[1]/section[2]/div[1]/div/div/div[1]/form/div[2]/div[2]/div/div/button").click();
+			page.waitForTimeout(3000);
+			page.locator("//*[@id=\"input_pass\"]").fill("123456");
+			page.waitForTimeout(3000);
+			page.locator("//*[@id=\"root\"]/div[1]/section[2]/div[1]/div/div/div[1]/form/div[2]/div[3]/div/div/button").click();
 	}
 
 }
